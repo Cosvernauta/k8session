@@ -1,6 +1,6 @@
 {
   "title": "Laboratorio 01",
-  "description": "Learn to work with deployments",
+  "description": "Deployments",
   "details": {
     "intro": {
       "text": "intro.md"
@@ -37,6 +37,6 @@
     }
   },
   "backend": {
-    "imageid": "kubernetes-kubeadm-1node"
+    "imageid": "kubernetes-kubeadm-2nodes"
   }
 }
