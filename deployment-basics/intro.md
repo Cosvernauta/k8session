@@ -1,4 +1,4 @@
 
 <br>
+Laboratorio 01: Uso de comandos básicos para deployar, eliminar, actualizar.
 
-In this scenario you'll learn the basics of creating a deployment with kubectl, scaling that deployment up and down, upgrading the deployment, and then deleting it.
