@@ -1,28 +1,28 @@
 {
   "title": "Laboratorio 01",
-  "description": "Deployments",
+  "description": "Deployments exercise",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
       {
-        "title": "Create a deployment",
+        "title": "Create a pod",
         "text": "step1/text.md",
         "verify": "step1/verify.sh"
       },
       {
-        "title": "Scale a deployment up",
+        "title": "Delete a pod",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
       },
       {
-        "title": "Scale a deployment down",
+        "title": "Create a Deployment YAML file",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       },
       {
-        "title": "Update a deployment",
+        "title": "Update a Deployment",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
       },
