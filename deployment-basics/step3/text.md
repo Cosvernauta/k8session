@@ -3,17 +3,15 @@ El área de desarrollo nos está pidiendo que instalemos un nginx en nuestro clu
 Ya que eliminamos nuestro pod en el ejercicio anterior, vamos a proceder a crear un POD usando deployment. Para ello vamos a crear un namespace llamado `k8sdeploy`.
 
 <br>
-<details><summary>Solution</summary>
+<details><summary>Solución</summary>
 <br>
-
 ```plain
 kubectl create ns k8sdeploy
 ```{{exec}}
-
 </details>
-
+<br>
 Una vez que tenemos nuestro namespace creado, vamos a proceder a crear la estructura de nuestro archivo YAML con la siguiente información en un archivo llamado myDeploy.yaml:
-
+<br>
 ```text
 **nombre del deploy:** nginx-deploy
 **Etiquetas:** app: nginx
@@ -22,10 +20,9 @@ Una vez que tenemos nuestro namespace creado, vamos a proceder a crear la estruc
 **image:** nginx:1.14.2
 **containerPort:** 80
 ```
-br>
+<br>
 <details><summary>Solución</summary>
 <br>
-
 ```plain
 touch myDeploy.yaml
 ```{{exec}}
@@ -53,11 +50,10 @@ spec:
         ports:
         - containerPort: 80
 ```
-
 </details>
-
+<br>
 1. Una vez creado nuestro archivo myDeploy.yaml, vamos a proceder a instalarlo con el comando apply dentro de kubectl en el namespace llamado `k8sdeploy`:
-
+<br>
 ```plain
 kubectl apply -f myDeploy.yaml -n k8sdeploy
 ```{{exec}}
