@@ -2,6 +2,7 @@ Tomemos en cuenta el significado de Pods:
 > Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
 
 Vamos a crear un namespace llamado `k8session` con el comando kubectl:
+
 ```plain
 kubectl create ns k8session
 ```{{exec}}
@@ -11,8 +12,9 @@ Creamos un archivo llamado mypod.yaml:
 touch mypod.yaml
 ```{{exec}}
 
-A continuación, vamos a crear un Pod llamado `mi-primer-pod` usando una imagen `nginx:alpine` en el namespace k8session, para ello usaremos el editor para editar mypod.yaml.
-Colocaremos la siguiente información:
+<br> A continuación, vamos a crear un Pod llamado `mi-primer-pod` usando una imagen `nginx:alpine` en el namespace k8session, para ello usaremos el editor para editar mypod.yaml.
+Colocaremos la siguiente información:<br>
+
 ```plain
 apiVersion: v1
 kind: Pod
@@ -26,12 +28,12 @@ spec:
     - containerPort: 80
 ```{{exec}}
 
-Instalamos usando el archivo YAML configurado con el comando kubectl:
+<br> Instalamos usando el archivo YAML configurado con el comando kubectl:<br>
 ```plain
 kubectl apply -f mypod.yaml
 ```{{exec}}
 
-Validar que nuestro pod creado esté en running:
+<br> Validar que nuestro pod creado esté en running:<br>
 ```plain
 kubectl get pods
 ```{{exec}}
