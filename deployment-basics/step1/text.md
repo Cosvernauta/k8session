@@ -8,9 +8,9 @@ kubectl create ns k8session
 ```{{exec}}
 2. Creamos un archivo llamado mypod.yaml:
 
-```shell
+```plain
 touch mypod.yaml
-```
+```{{exec}}
 3. A continuación, vamos a crear un Pod llamado `mi-primer-pod` usando una imagen `nginx:alpine` en el namespace `k8session`, para ello usaremos el editor para editar mypod.yaml.
 Escribiremos la siguiente información:
 
