@@ -2,7 +2,7 @@ El área de desarrollo nos está pidiendo que instalemos un nginx en nuestro clu
 
 Ya que eliminamos nuestro pod en el ejercicio anterior, vamos a proceder a crear un POD usando deployment. Para ello vamos a crear un namespace llamado `k8sdeploy`.
 
-br>
+<br>
 <details><summary>Solution</summary>
 <br>
 
