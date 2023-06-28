@@ -26,7 +26,7 @@ spec:
     image: nginx:alpine
     ports:
     - containerPort: 80
-```{{exec}}
+```
 
 <br> Instalamos usando el archivo YAML configurado con el comando kubectl en el namespace `k8session`:<br>
 ```plain
