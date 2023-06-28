@@ -3,12 +3,12 @@ Tomemos en cuenta el significado de Pods:
 
 1. Vamos a crear un namespace llamado `k8session` con el comando kubectl:
 
-```{{exec}}
+```exec
 kubectl create ns k8session
 ```
 2. Creamos un archivo llamado mypod.yaml:
 
-```{{exec}}
+```exec
 touch mypod.yaml
 ```
 3. A continuación, vamos a crear un Pod llamado `mi-primer-pod` usando una imagen `nginx:alpine` en el namespace `k8session`, para ello usaremos el editor para editar mypod.yaml.
@@ -28,7 +28,7 @@ spec:
 ```
 4. Instalamos usando el archivo YAML configurado con el comando kubectl en el namespace `k8session`:
 
-```{{exec}}
+```exec
 kubectl apply -f mypod.yaml -n k8session
 ```
 
