@@ -1,8 +1,8 @@
 #!/bin/bash
   
-IMAGE=$(kubectl get deployment my-first-deployment -o json | jq .spec.template.spec.containers[0].image)
+POD=$(kubectl get po -n k8sdeploy|wc -l)
 
-if [ "$IMAGE" = "\"httpd:alpine\"" ]; then
+if [ "$POD" = "\"httpd:alpine\"" ]; then
     exit 0
 else
     exit 1
