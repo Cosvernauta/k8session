@@ -1,8 +1,8 @@
 #!/bin/bash
 
-NUM_REP=$(kubectl get deployment my-first-deployment -o json | jq .spec.replicas)
+NUM_REP=$(kubectl get pods mi-primer-pod | wc -l)
 
-if [ "$NUM_REP" -eq "3" ]; then
+if [ "$NUM_REP" -eq "0" ]; then
     exit 0
 else
     exit 1
