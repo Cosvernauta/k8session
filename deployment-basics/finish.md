@@ -5,6 +5,6 @@
 
 Haz resuelto el laboratio 01.
 
-Para más información:
-https://kubernetes.io/docs/concepts/workloads/pods/
-https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+Para más información:<br>
+https://kubernetes.io/docs/concepts/workloads/pods/<br>
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/<br>
