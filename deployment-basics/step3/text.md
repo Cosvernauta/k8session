@@ -9,16 +9,19 @@ kubectl create ns k8sdeploy
 Una vez que tenemos nuestro namespace creado, vamos a proceder a crear la estructura de nuestro archivo YAML con la siguiente información en un archivo llamado myDeploy.yaml:
 
 
-**nombre del deploy:** nginx-deploy
-**Etiquetas:** app: nginx
-**replicas: 3
-**nombre del contenedor:** nginx
-**image:** nginx:1.14.2
-**containerPort:** 80
+**nombre del deploy:** nginx-deploy<br>
+**Etiquetas:** app: nginx<br>
+**replicas:** 3<br>
+**nombre del contenedor:** nginx<br>
+**image:** nginx:1.14.2<br>
+**containerPort:** 80<br>
 
 ```plain
 touch myDeploy.yaml
 ```{{exec}}
+
+<details>
+<summary><b>Solucion</b></summary>
 
 ```YAML
 apiVersion: apps/v1
@@ -44,18 +47,20 @@ spec:
         - containerPort: 80
 ```
 
-1. Una vez creado nuestro archivo myDeploy.yaml, vamos a proceder a instalarlo con el comando apply dentro de kubectl en el namespace llamado `k8sdeploy`:
+</details>
+
+- Una vez creado nuestro archivo myDeploy.yaml, vamos a proceder a instalarlo con el comando apply dentro de kubectl en el namespace llamado `k8sdeploy`:
 
 ```plain
 kubectl apply -f myDeploy.yaml -n k8sdeploy
 ```{{exec}}
 
-2. Validemos la información con la que se deployó el deployment con el comando get en el namespace `k8sdeploy`:
+- Validemos la información con la que se deployó el deployment con el comando get en el namespace `k8sdeploy`, en la columna AVAILABLE deben aparecer 3 (puede demorar unos 3 minutos):
 
 ```plain
 kubectl get deploy -n k8sdeploy
 ```{{exec}}
 
-3. Revisemos que los pods estén en running, el cual deben ser un total de 3 pods por la cantidad de replicas que se configuraron.
+- Revisemos que los pods estén en running, el cual deben ser un total de 3 pods por la cantidad de replicas que se configuraron.
 
-4. Si nuestros pods están en running, ¡Excelente!, acabas de instalar un microservicio como objeto Deployment.
+- Si nuestros pods están en running, ¡Excelente!, acabas de instalar un microservicio como objeto Deployment.
