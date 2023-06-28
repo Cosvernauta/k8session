@@ -1,43 +1,45 @@
-En el paso anterior, creamos un pod llamadoi `mi-primer-pod` en el cual validamos que existiera.
+En el paso anterior, creamos un pod llamado `mi-primer-pod` en el cual validamos que existiera.
 
-- Vamos a ejecutar nuevamente una validación del pod para observar que esté en running:
+1. Vamos a ejecutar nuevamente una validación del pod para observar que esté en running:
 
 ```plain
 kubectl get pods -n k8session
 ```{{exec}}
 
-- Validemos la información con la que se deployó el pod con el comando describe en el namespace `k8session`:
+2. Validemos la información con la que se deployó el pod con el comando describe en el namespace `k8session`:
 
 ```plain
-kubectl describe pods mi-primer-pod -n k8session
+kubectl describe mi-primer-pod -n k8session
 ```{{exec}}
 
-- Una vez que hemos visto que nuestro pod fue creado, entremos al pod.
+Con la información mostrada ¿En qué línea podemos saber el estado que muestra que nuestro pod está en running?
 
-<br>
-<details><summary>Solucion</summary>
-<br>
+- [ ] En Containers, en el apartado Ready.
+- [ ] En Containers, en el apartado State.
+- [ ] En ningún lado.
+
+3. Una vez que hemos visto que nuestro pod fue creado, entremos al pod.
+
+<details>
+<summary><b>Solucion<b></summary>
+
 ```plain
-kubectl exec mi-primer-pod -n k8session -- bash
+kubectl exec -it mi-primer-pod -n k8session -- sh
 ```{{exec}}
+
 </details>
 
-- Revisemos dentro del pod, ejecutando algunos comandos como: ps, curl http://localhost/, ss, netstat -ltnp.
+4. Revisemos dentro del pod, ejecutando algunos comandos como: ps, curl http://localhost/, ss, netstat -ltnp. Cuando terminenos ejecutamos el comando `exit`.
 
 ## Clean Up
 
-- Una vez que hemos salido del pod, vamos a proceder a borrar lo instalado, por lo cual vamos a proceder a borrar el pod, usando el archivo mypod.yaml
+5. Una vez que hemos salido del pod, vamos a proceder a borrar lo instalado, por lo cual vamos a proceder a borrar el pod, usando el archivo mypod.yaml
 
 ```plain
-kubectl delete -f mypod.yaml -n k8session
+kubectl delete -f mypod.yaml
 ```{{exec}}
 
-- Eliminemos el namespace que creamos llamado `k8session`:
+6. Eliminemos el namespace que creamos llamado `k8session`:
 ```plain
 kubectl delete ns k8session
-```{{exec}}
-
-- Eliminamos el archivo YAML que creamos con el comando rm:
-```plain
-rm -rf mypod.yaml
 ```{{exec}}
