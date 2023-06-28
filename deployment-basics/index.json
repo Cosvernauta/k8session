@@ -7,27 +7,27 @@
     },
     "steps": [
       {
-        "title": "Create a pod",
+        "title": "1. Create a pod",
         "text": "step1/text.md",
         "verify": "step1/verify.sh"
       },
       {
-        "title": "Delete a pod",
+        "title": "2. Delete a pod",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
       },
       {
-        "title": "Create a Deployment YAML file",
+        "title": "3. Create a Deployment YAML file",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       },
       {
-        "title": "Update a Deployment",
+        "title": "4. Update a Deployment",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
       },
       {
-        "title": "Delete a deployment",
+        "title": "5. Delete a deployment",
         "text": "step5/text.md",
         "verify": "step5/verify.sh"
       }
