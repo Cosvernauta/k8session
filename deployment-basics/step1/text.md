@@ -12,8 +12,8 @@ Creamos un archivo llamado mypod.yaml:
 touch mypod.yaml
 ```{{exec}}
 
-<br> A continuación, vamos a crear un Pod llamado `mi-primer-pod` usando una imagen `nginx:alpine` en el namespace k8session, para ello usaremos el editor para editar mypod.yaml.
-Colocaremos la siguiente información:<br>
+<br> A continuación, vamos a crear un Pod llamado `mi-primer-pod` usando una imagen `nginx:alpine` en el namespace `k8session`, para ello usaremos el editor para editar mypod.yaml.
+Escribiremos la siguiente información:<br>
 
 ```plain
 apiVersion: v1
@@ -28,23 +28,12 @@ spec:
     - containerPort: 80
 ```{{exec}}
 
-<br> Instalamos usando el archivo YAML configurado con el comando kubectl:<br>
+<br> Instalamos usando el archivo YAML configurado con el comando kubectl en el namespace `k8session`:<br>
 ```plain
-kubectl apply -f mypod.yaml
+kubectl apply -f mypod.yaml -n k8session
 ```{{exec}}
 
-<br> Validar que nuestro pod creado esté en running:<br>
+<br> Validar que nuestro pod creado esté en running en el namespace `k8session`:<br>
 ```plain
-kubectl get pods
+kubectl get pods -n k8session
 ```{{exec}}
-<br>
-<details><summary>Solution</summary>
-<br>
-
-```plain
-k create deployment my-first-deployment --image=nginx:alpine
-
-k get deployment my-first-deployment
-```{{exec}}
-
-</details>
