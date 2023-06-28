@@ -3,9 +3,9 @@ Tomemos en cuenta el significado de Pods:
 
 1. Vamos a crear un namespace llamado `k8session` con el comando kubectl:
 
-```{{exec}}
+```plain
 kubectl create ns k8session
-```
+```{{exec}}
 2. Creamos un archivo llamado mypod.yaml:
 
 ```shell
@@ -28,12 +28,12 @@ spec:
 ```
 4. Instalamos usando el archivo YAML configurado con el comando kubectl en el namespace `k8session`:
 
-```exec
+```plain
 kubectl apply -f mypod.yaml -n k8session
-```
+```{{exec}}
 
 Validar que nuestro pod creado esté en running en el namespace `k8session`:
 
-```{{exec}}
+```plain
 kubectl get pods -n k8session
-```
+```{{exec}}
