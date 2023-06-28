@@ -1,11 +1,27 @@
+Tomemos en cuenta el significado de Pods:
+> Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
 
-> Deployments are an object in Kubernetes used to describe the desired state of subset of pods in a cluster. Once a Deployment is created, various controllers in the cluster use it to create other API objects, and eventually have the desired number of pods running in a cluster.
+Vamos a crear un namespace llamado `k8session` con el comando kubectl:
+> kubectl create ns k8session
 
-https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+Creamos un archivo llamado mypod.yaml
+> touch mypod.yaml
 
-Create a deployment called `my-first-deployment` of image `nginx:alpine` in the default namespace.
+A continuación, vamos a crear un Pod llamado `mi-primer-pod` usando una imagen `nginx:alpine` en el namespace k8session, para ello usaremos el editor para editar mypod.yaml.
+Colocaremos la siguiente información:
+>apiVersion: v1
+>kind: Pod
+>metadata:
+>  name: mi-primer-pod
+>spec:
+>  containers:
+>  - name: mi-primer-pod
+>    image: nginx:alpine
+>    ports:
+>    - containerPort: 80
 
-Check to make sure the deployment is healthy.
+Validar que nuestro pod creado esté en running:
+>kubectl get pods
 
 <br>
 <details><summary>Solution</summary>
