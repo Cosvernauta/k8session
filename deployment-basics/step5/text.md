@@ -44,6 +44,15 @@ spec:
 
 </details>
 
+<details>
+<summary><b>Solucion</b></summary>
+
+```YAML
+kubectl apply -f myDeploy_1.15v2.yaml -n k8sdeploy
+```
+
+</details>
+
 - Una vez actualizado, revisamos el deployment y observamos que tengamos 2 en AVAILABLE, en el namespace llamado `k8sdeploy`:
 
 ```plain
@@ -63,7 +72,7 @@ El equipo de Arquitectura, junto con las áreas de Network, indican que ya no ha
 
 ```plain
 kubectl delete -f myDeploy_1.15v2.yaml -n k8sdeploy
-```
+```{{exec}}
 
 </details>
 
@@ -76,7 +85,7 @@ kubectl delete -f myDeploy_1.15v2.yaml -n k8sdeploy
 
 ```plain
 kubectl delete ns k8sdeploy
-```
+```{{exec}}
 
 </details>
 
