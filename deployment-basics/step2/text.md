@@ -9,7 +9,7 @@ kubectl get pods -n k8session
 - Validemos la información con la que se deployó el pod con el comando describe en el namespace `k8session`:
 
 ```plain
-kubectl describe mi-primer-pod -n k8session
+kubectl describe pods mi-primer-pod -n k8session
 ```{{exec}}
 
 Con la información mostrada ¿En qué línea podemos saber el estado que muestra que nuestro pod está en running?
