@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get deployment my-first-deployment
+kubectl get pods mi-primer-pod -n k8session
